@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<button onclick="tinh()">Login</button>
+<script>
+    function tinh() {
+        let login= document.getElementById("nhap").value;
+        let message = (login == 'Employee') ?
+            'Hello' :
+            (login == 'Director') ?
+                'Greetings' :
+                (login == '') ?
+                    'No login' :
+                    '';
+        alert(message)
+    }
+</script>
+</body>
+</html>

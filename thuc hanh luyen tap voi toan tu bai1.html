@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="sothu1">
+<input type="number" id="sothu2">
+<button onclick="tong()">tinh</button>
+<p id="hienthi"></p>
+<script>
+
+    function tong() {
+        let a = document.getElementById("sothu1").value;
+        let b = document.getElementById("sothu2").value;
+        let A = parseFloat(a);
+        let B = parseFloat(b);
+        T = A + B;
+        if (T > 4) {
+            document.getElementById("hienthi").innerHTML = "over";
+        } else {
+            document.getElementById("hienthi").innerHTML = "below";
+        }
+    }
+</script>
+</body>
+</html>

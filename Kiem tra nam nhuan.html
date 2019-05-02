@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra nam nhuan</title>
+</head>
+<body>
+<input type="number" id="nhap">
+<button onclick="tinh()">Tinh</button>
+<p id="Hienthi"></p>
+<script>
+    function tinh() {
+        let year = parseInt(document.getElementById("nhap").value);
+        if (!year) {
+            document.getElementById("Hienthi").innerHTML = "moi nhap nam can tinh";
+        }
+        else if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    document.getElementById("Hienthi").innerHTML = year + " la nam nhuan";
+                } else {
+                    document.getElementById("Hienthi").innerHTML = year + " khong la nam nhuan";;
+                }
+            } else {
+                document.getElementById("Hienthi").innerHTML = year + " la nam nhuan";
+            }
+        } else {
+            document.getElementById("Hienthi").innerHTML = year + " khong la nam nhuan";
+        }
+    }
+</script>
+</body>
+</html>

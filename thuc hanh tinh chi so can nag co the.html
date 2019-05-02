@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<input type="number" id="cannang" value="65"> (Kilogam)
+<br>
+<br>
+<input type="number" id="chieucao" value="1.75"> (met)
+<br>
+<br>
+<button onclick="tinh()">Tinh</button>
+<br>
+<br>
+<p id="hienthi"></p>
+<script>
+    function tinh() {
+        let kg1 = document.getElementById("cannang").value;
+        let m1 = document.getElementById("chieucao").value;
+        let kg = parseFloat(kg1);
+        let m = parseFloat(m1);
+
+        bmi = kg / (m * m);
+        if (bmi < 18) {
+            document.getElementById("hienthi").innerHTML = bmi + " ban dang suy dinh duong";
+
+        } else if (bmi < 25) {
+            document.getElementById("hienthi").innerHTML = bmi + " body rat chuan";
+        } else if(bmi < 35)
+        {
+            document.getElementById("hienthi").innerHTML = bmi + " ban dang thua can";
+        }
+    else
+        {
+            document.getElementById("hienthi").innerHTML = bmi + " ban dang qua beo";
+        }
+
+
+    }
+
+</script>
+</body>
+</html>

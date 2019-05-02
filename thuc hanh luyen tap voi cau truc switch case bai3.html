@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="nhap">
+<button onclick="tinh()">nhap</button>
+<p id="hienthi"></p>
+<script>
+    function tinh() {
+        let input = document.getElementById("nhap").value;
+        if (input > 0) {
+            document.getElementById("hienthi").innerHTML = "1";
+        }
+        else if (input < 0) {
+            document.getElementById("hienthi").innerHTML = "-1";
+        }
+        else (input == 0) {
+            document.getElementById("hienthi").innerHTML = "0";
+        }
+
+    }
+</script>
+</body>
+</html>

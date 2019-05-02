@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="input" type="number">
+<button onclick="kiemtra()">Kiểm Tra</button>
+<p id="ra"></p>
+<script>
+    function kiemtra() {
+        let number1 = document.getElementById("input").value;
+        let number = parseInt(number1);
+        switch (number == 0) {
+            case true: {
+                document.getElementById("ra").innerHTML = "Vẫn là số 0 thôi";
+                break;
+            }
+            default : {
+                switch (number > 0) {
+                    case true : {
+                        document.getElementById("ra").innerHTML = "Là số lớn hơn 0";
+                        break;
+                    }
+                    default : {
+                        document.getElementById("ra").innerHTML = "Là số nhỏ hơn 0";
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
